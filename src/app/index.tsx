@@ -1,13 +1,12 @@
 import React from 'react';
-import { router, Link, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 import { Pressable, Text, View, StyleSheet, Button } from 'react-native';
 
 
 export default function HomeScreen() {
     return (
         <Stack style={styles.container}>
-{/* block identifier */}
-            <View style={{ borderColor: 'pink', borderWidth:5, backgroundColor:}}>
+            <View style={{ borderColor: 'pink', borderWidth: 5, backgroundColor: '87E9ED' }}>
                 <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
                     Home screen
                 </Text>
