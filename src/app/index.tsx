@@ -1,44 +1,26 @@
 import React from 'react';
-import { Stack } from 'expo-router';
-import { Pressable, Text, View, StyleSheet, Button } from 'react-native';
-
+import { Stack, router } from 'expo-router';
+import { Pressable, Text, View, StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
     return (
-        <Stack style={styles.container}>
-            <View style={{ borderColor: 'pink', borderWidth: 5, backgroundColor: '87E9ED' }}>
-                <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
-                    Home screen
-                </Text>
-                <View style={styles.mainButton}>
-                    <Text aria-label='mainButton' style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
-                        Home screen
-                    </Text>
-                    <Stack.Screen name="[login]" />
-                </View>
+        <View style={styles.container}>
+            <Text style={styles.title}>Home screen</Text>
 
-
-
-                <View>
-                    <Pressable onPress={() => router.push('/login')} style={styles.button}>
-                        <Text style={styles.buttonText}>Profile</Text>
-                    </Pressable>
-                </View>
-            </View>
-            {/* block identifier */}
-        </Stack>
+            <Pressable onPress={() => router.push('/login')} style={styles.button}>
+                <Text style={styles.buttonText}>Go to Login</Text>
+            </Pressable>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        borderBottomColor: 'pink',
+        borderWidth: 10,
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    mainButton: {
-        paddingTop: 20,
-        fontSize: 20,
     },
     title: {
         fontSize: 24,

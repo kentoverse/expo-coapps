@@ -1,8 +1,7 @@
 import { Slot } from "expo-router";
 import React from "react";
 import { PaperProvider, MD3LightTheme, configureFonts } from "react-native-paper";
-import { TodoProvider } from "@/components/TodoContext";
-import SplashScreen from "@/components/splashScreent";
+import * as SplashScreen from 'expo-splash-screen';
 
 const fontConfig = {
   bodyLarge: { fontSize: 20, lineHeight: 22, letterSpacing: 0.5 },
@@ -13,14 +12,19 @@ const theme = {
   fonts: configureFonts({ config: fontConfig }),
 };
 
-export default function Root() {
+// Set the animation options. This is optional.
+SplashScreen.setOptions({
+  duration: 1000,
+  fade: true,
+});
+
+
+export default function App() {
   return (
-    <TodoProvider>
+
       <PaperProvider theme={theme}>
-        {/* Splash screen wraps Router layout */}
-        <SplashScreen nextScreen="/" duration={3500} />
+
         <Slot /> 
       </PaperProvider>
-    </TodoProvider>
   );
 }
