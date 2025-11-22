@@ -24,8 +24,8 @@
       "origin": "https://n"
     },
     "eas": {
-      "projectId": "9c91a303-28ee-4bd6-b243-7f6410811523"
-    },
+        "projectId": "0efb980d-7fb4-4560-ad1f-ce60df778400"
+      },
     "owner": "bot-digital-works",
     "API_BASE_URL": "https://your-backend.azurewebsites.net",
     "APPLICATIONINSIGHTS_CONNECTION_STRING": "..."
@@ -34,3 +34,6 @@
     "bundleIdentifier": "com.kentoverse.app-expo"
   }
 }
+
+
+ 
