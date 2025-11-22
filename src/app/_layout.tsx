@@ -12,7 +12,7 @@ export const unstable_settings = {
 export default function RoootLayout() {
 
     const [loaded] = useFonts({
-        SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+        SpaceMono: require('../assets/fonts/Verdana.ttf'),
     });
 
     useEffect(() => {

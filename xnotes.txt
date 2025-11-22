@@ -3,4 +3,10 @@
 CLI
 
 tree -L 3
-azd init --template 
+azd init --template
+
+
+87E9ED
+
+
+2B8488
