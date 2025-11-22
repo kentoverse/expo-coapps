@@ -1,8 +1,12 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
+    "types": [
+      "react",
+      "react-native",
+      "react-native-web"
+    ],
     "lib": [
       "ESNext",
       "DOM"
@@ -17,8 +21,10 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "baseUrl": "./src",
-      "paths": {
-      "@/*": ["*"]
+    "paths": {
+      "@/*": [
+        "*"
+      ]
     },
     "ignoreDeprecations": "6.0"
   },
@@ -32,6 +38,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-, "src/app/workspace/index.tsx"  ]
+    "expo-env.d.ts",
+    "src/app/workspace/index.tsx"
+  ],
+  "extends": "expo/tsconfig.base"
 }

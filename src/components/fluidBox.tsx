@@ -24,7 +24,7 @@ const FluidBox: React.FC<FluidBoxProps> = ({ title, children, style }) => {
         style, // override default styles if needed
       ]}
     >
-        <Text>{title}</Text>
+      <Text>{title}</Text>
       {children}
     </View>
   );

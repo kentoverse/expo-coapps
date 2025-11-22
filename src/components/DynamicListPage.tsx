@@ -6,11 +6,11 @@ import { Card, Text, ProgressBar } from "react-native-paper";
 
 interface Props {
     list: { [key: string]: any };
-}
+}   
 
 export default function DynamicListPage({ list }: Props) {
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView>
             <Text variant="titleLarge" style={styles.title}>
                 {list.name}
             </Text>
