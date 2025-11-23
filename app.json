@@ -8,6 +8,7 @@
       "output": "server",
       "bundler": "metro"
     },
+
     "plugins": [
       "expo-router",
       [
@@ -34,12 +35,15 @@
         }
       ]
     ],
+
     "experiments": {
       "typedRoutes": true
     },
+
     "android": {
       "package": "com.kentoverse.appexpo"
     },
+
     "ios": {
       "bundleIdentifier": "com.kentoverse.appexpo"
     },

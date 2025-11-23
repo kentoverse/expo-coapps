@@ -8,6 +8,8 @@ interface CardProps {
   onPress?: () => void;
 }
 
+
+
 const CardSimple: React.FC<CardProps> = ({ title, description, onPress }) => {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.8}>

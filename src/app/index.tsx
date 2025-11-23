@@ -31,13 +31,11 @@ const styles = StyleSheet.create({
         height: 200,
     },
     container: {
+        borderBottomColor: 'pink',
+        borderWidth: 10,
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    mainButton: {
-        paddingTop: 20,
-        fontSize: 20,
     },
     title: {
         fontSize: 24,

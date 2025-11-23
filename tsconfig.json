@@ -20,6 +20,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]
