@@ -1,39 +1,63 @@
 {
   "expo": {
+    "name": "app-expo",
+    "slug": "app-expo",
     "scheme": "acme",
+
     "web": {
       "output": "server",
       "bundler": "metro"
     },
+
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/FiraSans-MediumItalic.ttf",
+            "./assets/fonts/Verdana.ttf",
+            "./assets/fonts/Verdana-Bold.ttf",
+            "./assets/fonts/Andale.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#232323",
+          "image": "./assets/images/splash-icon.png",
+          "dark": {
+            "image": "./assets/images/splash-icon-dark.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ]
     ],
+
     "experiments": {
       "typedRoutes": true
     },
+
     "android": {
       "package": "com.kentoverse.appexpo"
     },
+
     "ios": {
       "bundleIdentifier": "com.kentoverse.appexpo"
-    }
-  },
-  "slug": "app-expo",
-  "extra": {
-    "router": {
-      "origin": "https://n"
     },
-    "eas": {
+    "extra": {
+      "router": {
+        "origin": "https://n"
+      },
+      "eas": {
         "projectId": "0efb980d-7fb4-4560-ad1f-ce60df778400"
       },
-    "owner": "bot-digital-works",
-    "API_BASE_URL": "https://your-backend.azurewebsites.net",
-    "APPLICATIONINSIGHTS_CONNECTION_STRING": "..."
+      "owner": "bot-digital-works",
+      "API_BASE_URL": "https://your-backend.azurewebsites.net",
+      "APPLICATIONINSIGHTS_CONNECTION_STRING": "..."
+    }
   },
-  "ios": {
-    "bundleIdentifier": "com.kentoverse.app-expo"
-  }
+  "icon": "./assets/images/icon.png"
 }
-
-
- 

@@ -1,17 +1,18 @@
-import { Stack } from 'expo-router';
+import { Stack, Slot } from 'expo-router';
 
 export const unstable_settings = {
-    anchor: 'profile',
+    anchor: 'index',
 };
 
 export default function Layout() {
     return (
         <Stack>
             <Stack.Screen name="[productId]" options={{ headerShown: false }} />
+            <Slot />
             <Stack.Screen
-                name="modal"
+                name="profile"
                 options={{
-                    presentation: 'transparentModal',
+                    presentation: 'modal',
                     webModalStyle: {
                         width: '95vw',
                         height: '95vh',
@@ -21,6 +22,8 @@ export default function Layout() {
                     sheetCornerRadius: 32,
 
                 }} />
+
+
 
         </Stack>
     );

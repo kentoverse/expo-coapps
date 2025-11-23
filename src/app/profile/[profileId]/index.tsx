@@ -9,8 +9,8 @@ export default function Modal() {
 
     return (
         <Stack>
-            <Stack.Screen name="[profileId]"/>
-                <Stack style={styles.container}>
+            <Stack.Screen name="dashboard"/>
+                <View >
                     <Text>Modal screen</Text>
 
                     {isPresented && <Link href="./">Dismiss modal</Link>}
@@ -20,10 +20,7 @@ export default function Modal() {
                         <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
                     </View>
 
-                </Stack >
-
-       
-
+                </View >
         </Stack>
 
 

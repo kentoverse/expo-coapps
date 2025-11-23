@@ -1,17 +1,11 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
-  root: './src', // ensure index.html is inside src
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true,
-  },
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': '/src',
     },
   },
- plugins: [react({})],
 });

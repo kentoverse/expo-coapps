@@ -5,5 +5,5 @@ import { Text } from "react-native";
 
 export default function Login() {
     const { name } = useLocalSearchParams();
-    return <Text style={{fontSize: 200}}>Login</Text>;
+    return <Text>This is {name}</Text>;
 }

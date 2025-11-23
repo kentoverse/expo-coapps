@@ -27,11 +27,11 @@ export default function RoootLayout() {
 
     return (
         <Stack>
-            <Stack.Screen name="index" />
+            <Stack.Screen name="index"/>
             <Stack.Screen
-                name="modal"
+                name="login"
                 options={{
-                    presentation: 'modal', // Enables modal behavior
+                    presentation:'modal', // Enables modal behavior
                     sheetAllowedDetents: [0.5, 1], // Array of snap positions for screens that have a width less than 768px.
                 }}
             />
