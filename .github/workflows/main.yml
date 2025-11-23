@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches: [main]
-  pull_request: {}
+  pull_request: {}  # triggers on all PRs
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        # working-directory: ./app  # uncomment if your code is in a subfolder
+        # working-directory: ./app  # uncomment if code is in a subfolder
 
       - name: Run lint
         run: npm run lint
