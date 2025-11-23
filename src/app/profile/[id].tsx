@@ -3,7 +3,7 @@ import { Text } from "react-native";
 
 
 
-export default function Login() {
+export default function UserId() {
     const { name } = useLocalSearchParams();
-    return <Text>This is {name}</Text>;
+    return <Text style={{fontSize: 200}}>User | {name}</Text>;
 }

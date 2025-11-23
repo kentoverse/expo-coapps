@@ -4,16 +4,16 @@ import { View, ViewStyle, Button, StyleSheet } from 'react-native';
 
 interface DotLottieProps {
   style?: ViewStyle;
-  source: string | {uri: string};
+  source: string | { uri: string };
 }
 
 
 
-export default function AnimateDotLot({}: DotLottieProps) {
+export default function AnimateDotLot({ }: DotLottieProps) {
   const ref = useRef<Dotlottie>(null);
 
   return (
-     
+
     <View style={styles.container}>
       <DotLottie
         ref={ref}
@@ -28,8 +28,8 @@ export default function AnimateDotLot({}: DotLottieProps) {
         <Button title="Stop" onPress={() => ref.current?.stop()} />
       </View>
     </View>
-      
-    );
+
+  );
 }
 
 

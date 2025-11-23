@@ -1,9 +1,21 @@
-import { useLocalSearchParams } from "expo-router";
-import { Text } from "react-native";
+import { router } from 'expo-router';
+import { Text, View } from 'react-native';
 
+// import { useSession } from '../ctx';
 
-
-export default function Login() {
-    const { name } = useLocalSearchParams();
-    return <Text style={{fontSize: 200}}>Login</Text>;
+export default function LogIn() {
+    // const { logIn } = useSession();
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text
+                onPress={() => {
+                    // logIn();
+                    // Navigate after signing in. You may want to tweak this to ensure sign-in is
+                    // successful before navigating.
+                    router.replace('/');
+                }}>
+                Sign In
+            </Text>
+        </View>
+    );
 }

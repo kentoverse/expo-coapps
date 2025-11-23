@@ -6,41 +6,27 @@ import { DotLottie, Mode, type Dotlottie } from '@lottiefiles/dotlottie-react-na
 import { StatusBar } from 'expo-status-bar';
 
 
-export default function Modal() {
+export default function Account() {
     const { name } = useLocalSearchParams();
     const ref = useRef<Dotlottie>(null);
     const isPresented = router.canGoBack();
 
-
     return (
-        <>
-            <View style={styles.container}>
-                <Text>Modal screen</Text>
-                {isPresented && <Link href="../">Dismiss modal</Link>}
-                <Text>Modal screen</Text>
-                <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
-            </View>
+        <View style={styles.container}>
+            <Text style={{ fontSize: 200 }}>Account | {name}</Text>
 
-            <View>
-                <Text style={{ fontSize: 100, color: 'gray' }}>
-                    Modal | {name}
-                </Text>
-
-                <Pressable onPress={() => router.push('/login')} style={styles.button}>
-                    <Text style={styles.buttonText}>Profile</Text>
-                </Pressable>
-                <Text aria-label='mainButton' style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
-                    <Link href="/profile" style={styles.button}>
-                        Profile
-                    </Link>
-                </Text>
-            </View>
-        </>
-
-
-
+            <Pressable onPress={() => router.push('./login/profile')} style={styles.button}>
+                <Text style={styles.buttonText}>Profile</Text>
+            </Pressable>
+            <Text aria-label='mainButton' style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
+                <Link href="/profile" style={styles.button}>
+                    Profile
+                </Link>
+            </Text>
+        </View>
     )
 }
+
 
 
 const styles = StyleSheet.create({
@@ -78,4 +64,5 @@ const styles = StyleSheet.create({
         marginVertical: 20,
     },
 });
+
 

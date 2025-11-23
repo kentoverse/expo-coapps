@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../services/navigation'
 
-interface Props {
-  nextScreen: string;
+
+
+type Props = {
+  nextScreen: keyof RootStackParamList;
   duration?: number;
-}
+};
+
 
 export default function SplashScreen({ nextScreen, duration = 3000 }: Props) {
   const navigation = useNavigation();
@@ -19,7 +23,7 @@ export default function SplashScreen({ nextScreen, duration = 3000 }: Props) {
     }, duration);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [navigation, nextScreen, duration]);
 
   return (
     <View style={styles.container}>

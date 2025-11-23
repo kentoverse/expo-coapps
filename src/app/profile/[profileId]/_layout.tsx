@@ -10,7 +10,7 @@ export default function Layout() {
             <Stack.Screen name="[productId]" options={{ headerShown: false }} />
             <Slot />
             <Stack.Screen
-                name="dashboard"
+                name="workspace"
                 options={{
                     presentation: 'transparentModal',
                     webModalStyle: {
@@ -19,12 +19,8 @@ export default function Layout() {
                         border: 'none',
                     },
                     sheetAllowedDetents: 'fitToContents',
-                    sheetCornerRadius: 32,
-
+                    sheetCornerRadius: 32    
                 }} />
-
-
-
         </Stack>
     );
 }
