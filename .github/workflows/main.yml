@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+        # working-directory: ./app  # uncomment if your code is in a subfolder
+
+      - name: Run lint
+        run: npm run lint
+        # working-directory: ./app
+
+      - name: Notify Vercel
+        uses: vercel/repository-dispatch/actions/status@v1
+        with:
+          name: Vercel - expo-coapps: lint
+          token: ${{ secrets.VERCEL_TOKEN }}
