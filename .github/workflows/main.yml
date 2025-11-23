@@ -24,10 +24,10 @@ jobs:
 
       - name: Run lint
         run: npm run lint
-        # working-directory: ./app
-
-      - name: Notify Vercela
+        
+        # working-directory: ./app    
+      - name: Notify Vercel
         uses: vercel/repository-dispatch/actions/status@v1
         with:
-          name: Vercel - expo-coapps: lint
+          name: "Vercel - expo-coapps: lint"
           token: ${{ secrets.VERCEL_TOKEN }}
