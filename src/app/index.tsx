@@ -1,20 +1,35 @@
-import React from 'react';
-import { Stack, router } from 'expo-router';
-import { Pressable, Text, View, StyleSheet } from 'react-native';
+import { useRef } from 'react';
+import { Stack, Slot, router, Link, useLocalSearchParams } from 'expo-router';
+import { Pressable, Text, View, StyleSheet, Button, Platform } from 'react-native';
+import { DotLottie, Mode, type Dotlottie } from '@lottiefiles/dotlottie-react-native';
 
 export default function HomeScreen() {
+
+    const { name } = useLocalSearchParams;
+
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Home screen</Text>
+            <Stack>
+                <Stack.Screen />
+                <View style={styles.mainButton}>
+                    <Text aria-label='mainButton' style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
+                        <Link href="/login" style={styles.button}>
+                            X{name}
+                        </Link>
+                    </Text>
+                </View>
 
-            <Pressable onPress={() => router.push('/login')} style={styles.button}>
-                <Text style={styles.buttonText}>Go to Login</Text>
-            </Pressable>
-        </View>
+                <Slot />
+            </Stack>
+        </View >
     );
 }
 
 const styles = StyleSheet.create({
+    animationContainer: {
+        width: 200,
+        height: 200,
+    },
     container: {
         borderBottomColor: 'pink',
         borderWidth: 10,
@@ -37,4 +52,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
     },
+    box: {
+        width: 200,
+        height: 200,
+        marginVertical: 20,
+    },
 });
+

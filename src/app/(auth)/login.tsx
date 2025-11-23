@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import { router } from 'expo-router';
+import { Text, View } from 'react-native';
+
+// import { useSession } from '../ctx';
+
+export default function LogIn() {
+    // const { logIn } = useSession();
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text
+                onPress={() => {
+                    // logIn();
+                    // Navigate after signing in. You may want to tweak this to ensure sign-in is
+                    // successful before navigating.
+                    router.replace('/');
+                }}>
+                Sign In
+            </Text>
+        </View>
+    );
+}
+=======
 import React from "react";
 import { Stack } from 'expo-router';
 import { View, Text, StyleSheet } from "react-native";
@@ -29,3 +52,4 @@ const styles = StyleSheet.create({
         color: 'black',
     }
 });
+>>>>>>> 6d2a1df9b665a2097109aab69a3bc04202d22d72

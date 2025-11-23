@@ -3,7 +3,7 @@
     "name": "app-expo",
     "slug": "app-expo",
     "scheme": "acme",
-
+    "icon": "./src/assets/images/icon.png",
     "web": {
       "output": "server",
       "bundler": "metro"
@@ -15,10 +15,10 @@
         "expo-font",
         {
           "fonts": [
-            "./assets/fonts/FiraSans-MediumItalic.ttf",
-            "./assets/fonts/Verdana.ttf",
-            "./assets/fonts/Verdana-Bold.ttf",
-            "./assets/fonts/Andale.ttf"
+            "./src/assets/fonts/FiraSans-MediumItalic.ttf",
+            "./src/assets/fonts/Verdana.ttf",
+            "./src/assets/fonts/Verdana-Bold.ttf",
+            "./src/assets/fonts/Andale.ttf"
           ]
         }
       ],
@@ -26,9 +26,9 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#232323",
-          "image": "./assets/images/splash-icon.png",
+          "image": "./src/assets/images/splash-icon.png",
           "dark": {
-            "image": "./assets/images/splash-icon-dark.png",
+            "image": "./src/assets/images/splash-icon-dark.png",
             "backgroundColor": "#000000"
           },
           "imageWidth": 200
@@ -47,8 +47,9 @@
     "ios": {
       "bundleIdentifier": "com.kentoverse.appexpo"
     },
-
     "extra": {
+      "expoPublicNounKey": "process.env.EXPO_PUBLIC_NOUN_KEY",
+      "expoPublicNounSecret": "process.env.EXPO_PUBLIC_NOUN_SECRET",
       "router": {
         "origin": "https://n"
       },
@@ -56,8 +57,9 @@
         "projectId": "0efb980d-7fb4-4560-ad1f-ce60df778400"
       },
       "owner": "bot-digital-works",
-      "API_BASE_URL": "https://your-backend.azurewebsites.net",
+      "API_BASE_URL": "process.env.MCP_ENDPOINT",
       "APPLICATIONINSIGHTS_CONNECTION_STRING": "..."
     }
   }
 }
+

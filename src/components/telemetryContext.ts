@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { reactPlugin } from '../data/services/telemetryService.js';
+import { reactPlugin } from '../services/telemetryService.js';
 
 const TelemetryContext = createContext(reactPlugin);
 
