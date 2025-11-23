@@ -1,4 +1,18 @@
 // src/config.// src/config.ts
+// src/config.ts or similar
+export const MCP_ENDPOINT =
+  process.env.MCP_ENDPOINT ||
+  "https://api.botdigital.works"; // Or the stable Container App FQDN
+
+// Example API call
+import axios from "axios";
+
+export const fetchData = async () => {
+  const response = await axios.get(`${MCP_ENDPOINT}/your-api-route`);
+  return response.data;
+};
+
+
 
 export interface ApiConfig {
   baseUrl: string;
