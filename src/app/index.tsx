@@ -11,10 +11,10 @@ export default function HomeScreen() {
         <View style={styles.container}>
             <Stack>
                 <Stack.Screen />
-                <View style={styles.mainButton}>
-                    <Text aria-label='mainButton' style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, }}>
+                <View style={styles.button}>
+                    <Text aria-label='mainButton' style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20}}>
                         <Link href="/login" style={styles.button}>
-                            X{name}
+                            LOGIN | {name}
                         </Link>
                     </Text>
                 </View>

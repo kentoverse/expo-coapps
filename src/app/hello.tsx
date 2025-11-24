@@ -2,7 +2,7 @@ import { encode as base64 } from "base-64";
 import { useEffect } from "react";
 import { useUIStore } from '../store/useUIStore';
 import { TextInput } from 'react-native'
-
+import { useMCPStore } from '../store/useMCPStore';
 
 
 async function testNounProject() {
@@ -22,8 +22,6 @@ async function testNounProject() {
     const data = await res.json();
     console.log("ICON:", data);
 }
-
-
 
 async function testSearch() {
     const key = process.env.EXPO_PUBLIC_NOUN_KEY!;
@@ -52,3 +50,27 @@ const setSearchTerm = useUIStore((s) => s.setSearchTerm);
     value={searchTerm}
     onChangeText={setSearchTerm}
 />
+
+
+
+export const Dashboard = () => {
+    const { data, loading, error, fetchData } = useMCPStore();
+
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
+    return (
+        <div>
+            <h1>MCP Data</h1>
+            <ul>
+                {data.map((item: any) => (
+                    <li key={item.id}>{item.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
