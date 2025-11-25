@@ -6,8 +6,7 @@
     "icon": "./src/assets/images/icon.png",
     "web": {
       "output": "server",
-      "bundler": "metro",
-      "entryPoint": "src/app/index.tsx"
+      "bundler": "metro"
     },
 
     "plugins": [
