@@ -1,13 +1,16 @@
-import { View, Text, Pressable } from 'react-native';
-import { router } from 'expo-router';
+import { Stack } from 'expo-router';
 
-export default function IndexPage() {
+export default function RootLayout() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>My Home Page</Text>
-      <Pressable onPress={() => router.push('/')}>
-        <Text>Go to Modal</Text>
-      </Pressable>
-    </View>
+    <Stack>
+      {/* Main screen */}
+      <Stack.Screen name="index" options={{ title: 'Home' }} />
+
+      {/* Modal screen */}
+      <Stack.Screen 
+        name="modal" 
+        options={{ presentation: 'modal', title: 'My Modal' }} 
+      />
+    </Stack>
   );
 }
