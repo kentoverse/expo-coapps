@@ -5,7 +5,7 @@ export default function IndexPage() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>My Home Page</Text>
-      <Pressable onPress={() => router.push('/modal')}>
+      <Pressable onPress={() => router.push('/')}>
         <Text>Go to Modal</Text>
       </Pressable>
     </View>

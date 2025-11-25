@@ -11,10 +11,10 @@ config.resolver.sourceExts = [...config.resolver.sourceExts, 'cjs'];
 
 // Path alias support
 config.resolver.extraNodeModules = {
-  '@': path.resolve(__dirname, 'src'),
+  '@': path.resolve(__dirname, 'app'),
 };
 
-// Watch the src folder for changes
-config.watchFolders = [path.resolve(__dirname, 'src')];
+// Watch the app folder for changes
+config.watchFolders = [path.resolve(__dirname, 'app')];
 
 module.exports = config;
