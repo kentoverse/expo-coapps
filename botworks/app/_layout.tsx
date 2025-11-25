@@ -1,12 +1,13 @@
-import { Stack } from 'expo-router';
-import React from 'react';
+import { View, Text, Pressable } from 'react-native';
+import { router } from 'expo-router';
 
-export default function Layout() {
+export default function IndexPage() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false, // optional
-      }}
-    />
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>My Home Page</Text>
+      <Pressable onPress={() => router.push('/modal')}>
+        <Text>Go to Modal</Text>
+      </Pressable>
+    </View>
   );
 }
