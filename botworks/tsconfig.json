@@ -2,13 +2,6 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "target": "ESNext",
-
-    "types": [
-      "react",
-      "react-native",
-      "react-native-web"
-    ],
-
     "lib": ["ESNext", "DOM"],
     "allowJs": true,
 

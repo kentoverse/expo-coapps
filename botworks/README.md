@@ -1,5 +1,5 @@
 
-# Portfolio RAG App
+# BOTWORKS App
 
 This project is a multi-user Retrieval-Augmented Generation (RAG) app built with a modern full-stack architecture:
 
